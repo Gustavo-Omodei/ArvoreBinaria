@@ -1,7 +1,6 @@
 public class Main {
     public static void main(String[] args) {
         ArvoreBinaria arvore = new ArvoreBinaria();
-
         arvore.inserir(10);
         arvore.inserir(5);
         arvore.inserir(15);
@@ -9,12 +8,28 @@ public class Main {
         arvore.inserir(7);
         arvore.inserir(12);
         arvore.inserir(20);
+        arvore.inserir(6);
+
 
         System.out.print("Árvore em ordem: ");
         exibirEmOrdem(arvore.raiz);
         System.out.println();
 
         System.out.println("\nDetalhes das relações na árvore:");
+        exibirDetalhesEmOrdem(arvore.raiz, null, "raiz");
+
+         // ----------------Remoção de exemplos----------------------------
+        arvore.remover(3);
+        arvore.remover(12);
+        arvore.remover(10);
+        arvore.remover(7 );
+
+
+        System.out.println("\nÁrvore em ordem após remoções: ");
+        exibirEmOrdem(arvore.raiz);
+        System.out.println();
+
+        System.out.println("\nDetalhes das relações na árvore após remoções:");
         exibirDetalhesEmOrdem(arvore.raiz, null, "raiz");
     }
 

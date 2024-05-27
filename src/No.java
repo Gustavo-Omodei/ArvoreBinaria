@@ -1,4 +1,4 @@
-public class No {
+class No {
     int conteudo;
     No direita;
     No esquerda;
@@ -8,6 +8,4 @@ public class No {
         this.esquerda = null;
         this.direita = null;
     }
-
 }
-

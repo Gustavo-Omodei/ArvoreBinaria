@@ -2,14 +2,6 @@ public class Main {
     public static void main(String[] args) {
         ArvoreBinaria arvore = new ArvoreBinaria();
         arvore.inserir(10);
-        arvore.inserir(5);
-        arvore.inserir(15);
-        arvore.inserir(3);
-        arvore.inserir(7);
-        arvore.inserir(12);
-        arvore.inserir(20);
-        arvore.inserir(6);
-
 
         System.out.print("Árvore em ordem: ");
         exibirEmOrdem(arvore.raiz);
@@ -18,12 +10,8 @@ public class Main {
         System.out.println("\nDetalhes das relações na árvore:");
         exibirDetalhesEmOrdem(arvore.raiz, null, "raiz");
 
-         // ----------------Remoção de exemplos----------------------------
-        arvore.remover(3);
-        arvore.remover(12);
-        arvore.remover(10);
-        arvore.remover(7 );
-
+        // ----------------Remoção de exemplos----------------------------
+        arvore.remover(14);
 
         System.out.println("\nÁrvore em ordem após remoções: ");
         exibirEmOrdem(arvore.raiz);
@@ -33,6 +21,7 @@ public class Main {
         exibirDetalhesEmOrdem(arvore.raiz, null, "raiz");
     }
 
+    // Método para exibir os elementos da árvore em ordem
     public static void exibirEmOrdem(No no) {
         if (no != null) {
             exibirEmOrdem(no.esquerda);
@@ -41,6 +30,7 @@ public class Main {
         }
     }
 
+    // Método para exibir os detalhes das relações na árvore em ordem
     public static void exibirDetalhesEmOrdem(No no, No pai, String direcao) {
         if (no != null) {
             exibirDetalhesEmOrdem(no.esquerda, no, "esquerda");
